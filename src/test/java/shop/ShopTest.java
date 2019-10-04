@@ -6,9 +6,7 @@ import shopItems.GuitarStringPack;
 import shopItems.SheetMusic;
 import shopItems.instruments.Guitar;
 import shopItems.instruments.Piano;
-import shopItems.instruments.propertyEnums.InstrumentType;
-import shopItems.instruments.propertyEnums.KeyType;
-import shopItems.instruments.propertyEnums.PianoType;
+import shopItems.instruments.propertyEnums.*;
 
 import static org.junit.Assert.assertEquals;
 
@@ -22,8 +20,8 @@ public class ShopTest {
     @Before
     public void before(){
         shop = new Shop();
-        piano = new Piano (1000, 1500, "AllTheKeys", "plastic", "black", InstrumentType.Keyboard, PianoType.BABYGRAND, KeyType.HAMMERACTION);
-        guitar = new Guitar(400, 600, "Plucky", "wood", "natural", InstrumentType.String, 6);
+        piano = new Piano (1000, 1500, "AllTheKeys", PianoMaterial.BIRCH, "black", InstrumentType.Keyboard, PianoType.BABYGRAND, KeyType.HAMMERACTION);
+        guitar = new Guitar(400, 600, "Plucky", GuitarMaterial.WOOD, "natural", InstrumentType.String, 6);
         guitarStringPack = new GuitarStringPack(10, 15, "Plucky", 6);
         sheetMusic = new SheetMusic(2, 10, "Musical Notology", "Doctor Who Theme", "BBC");
     }

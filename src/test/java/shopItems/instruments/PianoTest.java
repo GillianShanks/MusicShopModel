@@ -4,10 +4,10 @@ import org.junit.Before;
 import org.junit.Test;
 import shopItems.instruments.propertyEnums.InstrumentType;
 import shopItems.instruments.propertyEnums.KeyType;
+import shopItems.instruments.propertyEnums.PianoMaterial;
 import shopItems.instruments.propertyEnums.PianoType;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
 
 public class PianoTest {
 
@@ -15,7 +15,7 @@ public class PianoTest {
 
     @Before
     public void before(){
-        piano = new Piano (1000, 1500, "AllTheKeys", "plastic", "black", InstrumentType.Keyboard, PianoType.BABYGRAND, KeyType.HAMMERACTION);
+        piano = new Piano (1000, 1500, "AllTheKeys", PianoMaterial.BIRCH, "black", InstrumentType.Keyboard, PianoType.BABYGRAND, KeyType.HAMMERACTION);
 
     }
 
@@ -36,7 +36,7 @@ public class PianoTest {
 
     @Test
     public void hasMaterial() {
-        assertEquals("plastic", piano.getMaterial());
+        assertEquals(PianoMaterial.BIRCH, piano.getMaterial());
 
     }
 

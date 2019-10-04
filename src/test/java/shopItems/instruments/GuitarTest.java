@@ -2,6 +2,7 @@ package shopItems.instruments;
 
 import org.junit.Before;
 import org.junit.Test;
+import shopItems.instruments.propertyEnums.GuitarMaterial;
 import shopItems.instruments.propertyEnums.InstrumentType;
 
 import static org.junit.Assert.assertEquals;
@@ -12,7 +13,7 @@ public class GuitarTest {
 
     @Before
     public void before(){
-        guitar = new Guitar (400, 600, "Plucky", "wood", "natural", InstrumentType.String, 6);
+        guitar = new Guitar (400, 600, "Plucky", GuitarMaterial.WOOD, "natural", InstrumentType.String, 6);
 
     }
 
@@ -33,7 +34,7 @@ public class GuitarTest {
 
     @Test
     public void hasMaterial() {
-        assertEquals("wood", guitar.getMaterial());
+        assertEquals(GuitarMaterial.WOOD, guitar.getMaterial());
 
     }
 
