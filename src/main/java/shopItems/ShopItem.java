@@ -2,12 +2,12 @@ package shopItems;
 
 import interfaces.ISell;
 
-public abstract class shopItem implements ISell {
+public abstract class ShopItem implements ISell {
     private double wholesalePrice;
     private double sellingPrice;
     private String brand;
 
-    public shopItem (double wholesalePrice, double sellingPrice, String brand){
+    public ShopItem(double wholesalePrice, double sellingPrice, String brand){
         this.wholesalePrice = wholesalePrice;
         this.sellingPrice = sellingPrice;
         this.brand = brand;
