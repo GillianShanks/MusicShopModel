@@ -2,6 +2,7 @@ package shopItems.instruments;
 
 import org.junit.Before;
 import org.junit.Test;
+import shopItems.instruments.propertyEnums.InstrumentType;
 
 import static org.junit.Assert.assertEquals;
 
@@ -42,7 +43,22 @@ public class GuitarTest {
     }
 
     @Test
+    public void hasInstrumentType() {
+        assertEquals(InstrumentType.String, guitar.getInstrumentType());
+    }
+
+    @Test
     public void hasNumOfStrings() {
         assertEquals(6, guitar.getNumOfStrings());
+    }
+
+    @Test
+    public void canGetMarkupValue() {
+        assertEquals(200, guitar.calculateMarkup(), 0.0);
+    }
+
+    @Test
+    public void canPlay() {
+        assertEquals("twang twang", guitar.play());
     }
 }

@@ -1,4 +1,4 @@
-package shopItems.instruments;
+package shopItems.instruments.propertyEnums;
 
 public enum InstrumentType {
     Bass,

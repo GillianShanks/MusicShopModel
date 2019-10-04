@@ -1,8 +1,10 @@
 package shopItems.instruments;
 
+import interfaces.IPlay;
 import shopItems.ShopItem;
+import shopItems.instruments.propertyEnums.InstrumentType;
 
-public abstract class Instrument extends ShopItem {
+public abstract class Instrument extends ShopItem implements IPlay {
 
     private String material;
     private String colour;

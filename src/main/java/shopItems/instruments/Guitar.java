@@ -1,5 +1,7 @@
 package shopItems.instruments;
 
+import shopItems.instruments.propertyEnums.InstrumentType;
+
 public class Guitar extends Instrument{
 
     private int numOfStrings;
@@ -13,5 +15,9 @@ public class Guitar extends Instrument{
 
     public int getNumOfStrings() {
         return numOfStrings;
+    }
+
+    public String play() {
+        return "twang twang";
     }
 }
